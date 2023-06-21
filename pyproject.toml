@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "cbi-inflation-page"
+version = "0.1.0"
+description = ""
+authors = ["mohammad amin alavian <m.amin.alavian@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "cbi_inflation_page"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+bs4 = "^0.0.1"
+pandas = "^2.0.2"
+selenium = "^4.10.0"
+webdriver-manager = "^3.8.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
