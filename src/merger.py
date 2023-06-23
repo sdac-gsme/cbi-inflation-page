@@ -55,13 +55,6 @@ def create_monthly_table() -> pd.DataFrame:
     merged_table = pd.concat(df_list, keys=years, names=["Year", "Month"])
     merged_table = merged_table.sort_index()
 
-    ptop = ((merged_table["CPI"] / merged_table["CPI"].shift(12) - 1) * 100).round(3)
-    merged_table["Point_to_Point_Inflation"] = ptop
-
-    year_month = merged_table.index.to_frame().astype(str)
-    month_series = year_month["Month"].apply(lambda month: f"0{month}" if len(month)==1 else month)
-    merged_table.insert(0, "Year-Month", year_month["Year"] + "-" + month_series)
-
     return merged_table
 
 def clean_monthly_dataframe(dataframe: pd.DataFrame) -> pd.DataFrame:
