@@ -19,7 +19,7 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-1. Fetching Data
+1. Fetching Data:  
 To retrieve data from the central bank's website, run the following command:
 
 ```bash
@@ -28,7 +28,7 @@ python src/scraper.py
 
 This command will initiate the scraper script, which will fetch the inflation data and store it in a local file.
 
-2. Merging and Cleaning Data
+2. Merging and Cleaning Data:  
 After fetching the data, you can merge and clean it using the following command:
 
 ```bash
